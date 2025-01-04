@@ -3,15 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Add One</title>
 </head>
 <body>
-    <button id="addButton">Add One</button>
-    <button id="subButton">Subtract One</button>
-    <button id="resetButton">Reset</button>
-    <button id="squareButton">Cube</button>
-    <button id = "squareRootButton">Square Root</button>
-    <div id="output">0</div>
+
+    <div id="graphContainer">
+        <div id="screenToggle">
+            <button onclick="showList()">View List</button>
+            <button onclick="showGraph()">View Graph</button>
+        </div>
+        <div id="outputScreen">
+            <div id="functionList" style="display: none;">
+                <h3>Function List</h3>
+                <ul id="functionItems">
+                    <!--y0= inputText-->
+                    <li>
+                        <label for="y0">y0=</label>
+                        <input type="text" id="y0" placeholder="e.g. x">
+                    </li>
+                    <li>
+                        <label for="y1">y1=</label>
+                        <input type="text" id="y1" placeholder="e.g. x*x">
+                    </li>
+                    <li>
+                        <label for="y2">y2=</label>
+                        <input type="text" id="y2" placeholder="e.g. x*x*x">
+                    </li>
+                    <li>
+                        <label for="y3">y3=</label>
+                        <input type="text" id="y3" placeholder="e.g. more math">
+                    </li>
+
+                </ul>
+
+            </div>
+            <div id="graphScreen" style="display: block;">
+                <canvas id="graphCanvas" width="500" height="500"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <div id="keypad">
+            
+        <div id="numberButtons">
+            <div class="row">
+                <button class= "key" id="button7">7</button>
+                <button class= "key" id="button8">8</button>
+                <button class= "key" id="button9">9</button>
+            </div>
+
+            <div class="row">
+                <button class= "key" id="button4">4</button>
+                <button class= "key" id="button5">5</button>
+                <button class= "key" id="button6">6</button>
+            </div>
+
+            <div class="row">
+                <button class= "key" id="button1">1</button>
+                <button class= "key" id="button2">2</button>
+                <button class= "key" id="button3">3</button>
+            </div>
+
+            <div class="row">
+                <button class= "key" id="button0">0</button>
+                <button class= "key" id="buttonDot">.</button>
+                <button class= "key" id="buttonNeg">-</button>
+            </div>
+        </div>
+        <div id = "operatorButtons">
+            <button id="divideButton"> ÷</button>
+            <button id="multiplyButton">x</button>
+            <button id="subButton">-</button>
+            <button id="addButton">+</button>
+        </div>
+    </div>
+    <!--         
+     <button id="resetButton">Reset</button>
+        <button id="squareButton">Square</button>
+        <button id = "squareRootButton">Square Root</button>
+        <button id = "cubeButton">Cube</button>
+    -->
+   
+    <!-- <div id="output">0</div>    
+
+    <div id="plottingButtons">
+    </div> -->
+
+   
     <script src="script.js"></script>
+    <script src="graph.js"></script>
+   
 </body>
 </html>

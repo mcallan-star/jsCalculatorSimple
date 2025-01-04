@@ -4,26 +4,28 @@ const button2 = document.getElementById('subButton');
 const button3 = document.getElementById('resetButton');
 const button4 = document.getElementById('squareButton');
 const button5 = document.getElementById('squareRootButton');
-const output = document.getElementById('output');
+const button6 = document.getElementById('cubeButton');
+const button7 = document.getElementById('divideButton');
+const button8 = document.getElementById('multiplyButton');
 
 // Initialize the count
-let count = 0;
+let count = 0n;
 
 // Add event listener to each buttons
 button1.addEventListener('click', () => {
-    count += 1; // Increment the count
+    count += 1n; // Increment the count
     output.textContent = count; // Update the output div
       
 });
 
 button2.addEventListener('click', () => {
-    count -= 1; // decrement the count
+    count -= 1n; // decrement the count
     output.textContent = count; // Update the output div
       
 });
 
 button3.addEventListener('click', () => {
-    count = 0; // reset the count
+    count = 0n; // reset the count
     output.textContent = count; // Update the output div
       
 });     
@@ -35,7 +37,7 @@ button4.addEventListener('click', () => {
 }); 
 
 button5.addEventListener('click', () => {
-    if (count < 0) {
+    if (count < 0n) {
         output.textContent = "Error: Cannot take square root of negative number";
     }else{
     count = Math.sqrt(count); // square root the count
@@ -43,4 +45,12 @@ button5.addEventListener('click', () => {
     }
       
 });
+
+button6.addEventListener('click', () => {
+    count = count*count*count; // cube the count
+    output.textContent = count; // Update the output div
+      
+});
+
+
 

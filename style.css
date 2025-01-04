@@ -1,0 +1,52 @@
+body {
+    background-color: #9382f1;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* General keypad styling */
+.keypad {
+    display: flex;
+    flex-direction: column;
+    /* Arrange rows vertically */
+    width: 150px;
+    /* Adjust width as needed */
+    margin: 0 auto;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+}
+
+/* Style each row */
+.row {
+    display: flex;
+
+    /* Spacing between rows */
+    margin: 5px 0;
+
+}
+
+/* Style individual keys */
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Add hover effect for keys */
+.key:hover {
+    background-color: #2bff4f;
+}
+
+canvas {
+    border: 1px solid #000;
+    margin-top: 20px;
+}
